@@ -7,17 +7,17 @@ require 'migrator_web/version'
 Gem::Specification.new do |s|
   s.name        = 'migrator_web'
   s.version     = MigratorWeb::VERSION
-  s.authors     = ['TODO: Your name']
-  s.email       = ['TODO: Your email']
-  s.homepage    = 'TODO'
-  s.summary     = 'TODO: Summary of MigratorWeb.'
-  s.description = 'TODO: Description of MigratorWeb.'
+  s.authors     = ['Wei Zhu']
+  s.email       = ['yesmeck@gmail.com']
+  s.homepage    = 'https://github.com/yesmeck/migrator_web'
+  s.summary     = 'Web interface for Rails Migrator'
+  s.description = 'A web interface for Rails Migrator.'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'rails', '~> 4.0.3'
-  s.add_dependency 'jquery-rails'
+  s.add_runtime_dependency 'jquery-rails'
 
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'jquery-rails'
