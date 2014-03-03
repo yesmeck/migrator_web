@@ -1,0 +1,26 @@
+<p>database: <%= ActiveRecord::Base.connection_config[:database] %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Migration ID</th>
+      <th>Migration Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @migrations.each do |migration| %>
+    <tr>
+      <td><%= migration.status %></td>
+      <td><%= migration.id  %></td>
+      <td><%= migration.name %></td>
+      <td>
+        <%= link_to 'Down', down_migration_path(migration), remote: true, method: :post %>
+        <%= link_to 'Up', up_migration_path(migration), remote: true, method: :post %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+

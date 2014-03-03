@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MigratorWeb</title>
-  <%= stylesheet_link_tag    "migrator_web/application", media: "all" %>
-  <%= javascript_include_tag "migrator_web/application" %>
+  <title>Migrator</title>
+  <%= stylesheet_link_tag    "migrator_web/application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "migrator_web/application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,3 +12,4 @@
 
 </body>
 </html>
+
