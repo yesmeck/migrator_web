@@ -19,7 +19,7 @@ Mount it in your config/routes.rb:
 mount MigratorWeb::Engine => '/migrator_web'
 ```
 
-And open it in your brower http://myapp.dev/migrator_web .
+And open it in your browser http://myapp.dev/migrator_web .
 
 ## Contributing
 
