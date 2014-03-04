@@ -1,15 +1,17 @@
 MigratorWeb::Engine.routes.draw do
-  root 'migrations#index'
+  if Rails.env.development?
+    root 'migrations#index'
 
-  resources :migrations do
-    collection do
-      post :migrate
-    end
+    resources :migrations do
+      collection do
+        post :migrate
+      end
 
-    member do
-      post :down
-      post :up
-      post :redo
+      member do
+        post :down
+        post :up
+        post :redo
+      end
     end
   end
 end
