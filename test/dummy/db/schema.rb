@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(version: 20140303200227) do
   create_table "comments", force: true do |t|
   end
 
+  create_table "posts", force: true do |t|
+  end
+
   create_table "users", force: true do |t|
   end
 

@@ -1,0 +1,11 @@
+<tr id="<%= dom_id migration %>">
+  <td><%= migration.status %></td>
+  <td><%= migration.id  %></td>
+  <td><%= migration.name %></td>
+  <td>
+    <%= link_to 'Down', down_migration_path(migration), remote: true, method: :post, data: { disable_with: 'Downing' } %>
+    <%= link_to 'Up', up_migration_path(migration), remote: true, method: :post, data: { disable_with: 'Uping' } %>
+    <%= link_to 'Redo', redo_migration_path(migration), remote: true, method: :post, data: { disable_with: 'Redoing' } %>
+  </td>
+</tr>
+
