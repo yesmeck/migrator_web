@@ -12,3 +12,4 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
+gem 'jquery-rails', '~> 3.1.0', group: :development
