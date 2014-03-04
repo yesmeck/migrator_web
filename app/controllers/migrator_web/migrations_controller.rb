@@ -6,7 +6,7 @@ module MigratorWeb
       @migrations = Migration.all
     end
 
-    [:down, :up].each do |method|
+    [:down, :up, :redo].each do |method|
       define_method(method) do
         @migration = Migration.new(id: params[:id])
         @migration.send(method)

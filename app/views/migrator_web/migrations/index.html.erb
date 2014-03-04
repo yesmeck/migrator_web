@@ -18,6 +18,7 @@
       <td>
         <%= link_to 'Down', down_migration_path(migration), remote: true, method: :post %>
         <%= link_to 'Up', up_migration_path(migration), remote: true, method: :post %>
+        <%= link_to 'Redo', redo_migration_path(migration), remote: true, method: :post %>
       </td>
     </tr>
     <% end %>
